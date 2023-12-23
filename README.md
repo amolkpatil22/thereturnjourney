@@ -45,7 +45,7 @@ The API endpoints are designed to perform CRUD operations on product data. Detai
 
 ## Available Endpoints
 
-- **GET <a href="http://localhost:8080/products">http://localhost:8080/products</a>**: Retrieve all products.
+- **GET http://localhost:8080/products**: Retrieve all products.
 - **GET http://localhost:8080/products/:id**: Retrieve a product by ID.
 - **POST http://localhost:8080/products**: Add a new product.
 - **PUT http://localhost:8080/products/:id**: Update a product by ID.
