@@ -71,8 +71,9 @@ Once the server is running locally, you can access the Swagger UI by navigating 
     ```
 
 ## Swagger ScreenShots
-!(screenshots/SwaggerSS1.png)
-!(screenshots/SwaggerSS2.png)
-!(screenshots/SwaggerSS3.png)
-!(screenshots/SwaggerSS4.png)
+![ScreenShot 1](screenshots/SwaggerSS1.png)
+![ScreenShot 2](screenshots/SwaggerSS2.png)
+![ScreenShot 3](screenshots/SwaggerSS3.png)
+![ScreenShot 4](screenshots/SwaggerSS4.png)
+
 
