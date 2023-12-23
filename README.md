@@ -69,10 +69,10 @@ Once the server is running locally, you can access the Swagger UI by navigating 
     ```bash
     npm run cypress
     ```
-**- Steps to Follow:** 
-1. Select E2E Testing
-2. Start E2E Testing in chrome/edge
-3. Click on spec.cy.js
+**Steps to Follow:** 
+- Select E2E Testing.
+- Start E2E Testing in chrome/edge.
+- Click on `spec.cy.js`.
     
 2. **Run Tests in Headless Mode:**
 
