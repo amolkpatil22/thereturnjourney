@@ -64,10 +64,20 @@ Once the server is running locally, you can access the Swagger UI by navigating 
 - Use the provided examples to make requests and see responses in real-time.
 
 ## Cypress Testing
-1. **How to run:**
+1. **Run Tests in Browser:**
 
     ```bash
     npm run cypress
+    ```
+**- Steps to Follow:** 
+1. Select E2E Testing
+2. Start E2E Testing in chrome/edge
+3. Click on spec.cy.js
+    
+2. **Run Tests in Headless Mode:**
+
+    ```bash
+    npx cypress run
     ```
 
 ## Swagger ScreenShots
