@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const logger = (req, res, next) => {
     fs_1.default.appendFileSync('logger.txt', `TimeStamp: ${new Date()} HTTPMethod: ${req.method} URL: ${req.url}\n`);
+    console.log(`TimeStamp: ${new Date()} HTTPMethod: ${req.method} URL: ${req.url}`);
     next();
 };
 exports.default = logger;

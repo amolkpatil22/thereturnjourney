@@ -1,7 +1,6 @@
 
 describe('API endpoints testing', () => {
 
-
   it("Should fetch all the products", () => {         // GET /api/products: Retrieve a list of products.
     cy.request("http://localhost:8080/products")
       .then((res) => {

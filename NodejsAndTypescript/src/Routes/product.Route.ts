@@ -9,10 +9,46 @@ interface data {
 
 let data: data[] = [
     { id: 54512231, productName: "iphone", brand: "apple", category: "electronics" },
-    { id: 54512212, productName: "iphone", brand: "apple", category: "electronics" }
+    { id: 54512212, productName: "samsungTV", brand: "samsung", category: "electronics" }
 ]
 
+/**
+ * @swagger
+ * definitions:
+ *   Product:
+ *     type: object
+ *     required:      
+ *       - productName
+ *       - brand
+ *       - category
+ *     properties:
+ *       productName:
+ *         type: string
+ *       brand:
+ *         type: string
+ *       category:
+ *         type: string
+ */
+
+
 const productRoute = express.Router()
+
+
+/**
+ * @swagger
+ * /products:
+ *   get:
+ *     description: Retrieve all products
+ *     responses:
+ *       200:
+ *         description: Success
+ *         schema:
+ *           type: array
+ *           items:
+ *             $ref: '#/definitions/Product'
+ *       404:
+ *         description: Not found
+ */
 
 productRoute.get("/", (req: express.Request, res: express.Response) => {
     res.status(200).send({
@@ -21,6 +57,26 @@ productRoute.get("/", (req: express.Request, res: express.Response) => {
         data: data,
     })
 })
+
+/**
+ * @swagger
+ * /products/{id}:
+ *   get:
+ *     description: Retrieve a single product by ID
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *     responses:
+ *       200:
+ *         description: Success
+ *         schema:
+ *           $ref: '#/definitions/Product'
+ *       404:
+ *         description: Not found
+ */
+
 
 productRoute.get("/:id", (req: express.Request, res: express.Response) => {
     const { id } = req.params
@@ -40,6 +96,24 @@ productRoute.get("/:id", (req: express.Request, res: express.Response) => {
     }
 })
 
+/**
+ * @swagger
+ * /products:
+ *   post:
+ *     description: Add a new product
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/definitions/Product'
+ *     responses:
+ *       200:
+ *         description: Product Added successfully
+ *         schema:
+ *           $ref: '#/definitions/Product'
+ */
+
 
 productRoute.post("/", (req: express.Request, res: express.Response) => {
     let newproduct = { ...req.body, id: Math.floor(Math.random() * 1000000000) }
@@ -51,6 +125,32 @@ productRoute.post("/", (req: express.Request, res: express.Response) => {
         data: newproduct,
     })
 })
+
+/**
+ * @swagger
+ * /products/{id}:
+ *   put:
+ *     description: Update a product by ID
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/definitions/Product'
+ *     responses:
+ *       200:
+ *         description: Product updated successfully
+ *         schema:
+ *           $ref: '#/definitions/Product'
+ *       404:
+ *         description: Not found
+ */
+
 
 productRoute.put("/:id", (req: express.Request, res: express.Response) => {
     const { id } = req.params
@@ -74,6 +174,24 @@ productRoute.put("/:id", (req: express.Request, res: express.Response) => {
     }
 })
 
+/**
+ * @swagger
+ * /products/{id}:
+ *   delete:
+ *     description: Delete a product by ID
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *     responses:
+ *       200:
+ *         description: Product deleted successfully
+ *         schema:
+ *           $ref: '#/definitions/Product'
+ *       404:
+ *         description: Not found
+ */
 
 productRoute.delete("/:id", (req: express.Request, res: express.Response) => {
     const { id } = req.params
