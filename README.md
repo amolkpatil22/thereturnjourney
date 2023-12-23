@@ -56,8 +56,7 @@ The API endpoints are designed to perform CRUD operations on product data. Detai
 Swagger is integrated into this API to provide comprehensive documentation of available endpoints, request/response models, and other essential information. The Swagger UI allows users to interact with the API directly from a user-friendly interface, making it easier to understand the API's capabilities and requirements.
 
 #### Accessing Swagger UI
-Once the server is running locally, you can access the Swagger UI by navigating to:
-**URL: http://localhost:8080/api-docs**
+Once the server is running locally, you can access the Swagger UI by navigating to:**http://localhost:8080/api-docs**
 
 #### How to Use
 - Navigate to the provided Swagger UI URL in the browser.
