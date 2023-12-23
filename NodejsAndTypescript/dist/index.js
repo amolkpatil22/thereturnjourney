@@ -6,9 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const product_Route_1 = __importDefault(require("./Routes/product.Route"));
+const logger_1 = __importDefault(require("./Middleware/logger"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
+app.use(logger_1.default);
 app.use("/products", product_Route_1.default);
 app.listen(8080, () => {
     console.log("connected to server");

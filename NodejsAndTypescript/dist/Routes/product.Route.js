@@ -69,7 +69,7 @@ productRoute.delete("/:id", (req, res) => {
         let deletedProduct = data.splice(productIndex, 1);
         res.status(200).send({
             status: 'success',
-            message: 'Product updated successfully.',
+            message: 'Product deleted successfully.',
             data: deletedProduct,
         });
     }
