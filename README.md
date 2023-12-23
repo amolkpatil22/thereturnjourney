@@ -24,7 +24,7 @@ The Product API is a RESTful service designed to manage product information, pro
 2. **Navigate to the project directory:**
 
     ```bash
-    cd NodejsAndTypescript
+    cd thereturnjourney/NodejsAndTypescript
     ```
 
 3. **Install dependencies:**
