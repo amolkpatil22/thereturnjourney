@@ -9,7 +9,7 @@ The Product API is a RESTful service designed to manage product information, pro
 - [Installation](#installation)
 - [Usage](#usage)
 - [Available Endpoints](#available-endpoints)
-- [Swagger](#Test-endpoints-with-Swagger)
+- [Test endpoints with Swagger](#Test-endpoints-with-Swagger)
 
 ## Installation 
 
